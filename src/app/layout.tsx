@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { pt_sans } from "./fonts";
-import "./globals.css";
+import "./globals.scss";
 
 
 
