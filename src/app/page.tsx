@@ -1,21 +1,55 @@
 "use client";
+import { useTranslation } from "react-i18next";
+import Home from "@/components/home/home";
 import { Navbar } from "@/components/navbar/Navbar.component";
-import { MyComponent } from "@/components/test";
+import { Parallax } from "@/components/parallax/Parallax";
+import { sunriseUrl } from "@/utils/styles";
+import "../i18n";
 
-import styles from "./page.module.css";
-
-export default function Home() {
+export default function MyPortfolio() {
+  const { t } = useTranslation();
   return (
     <main>
       <section id="Home">
-        <Navbar/>
+        <Navbar />
+        <Home />
       </section>
       <section id="About">
-        <a href="">Who am I and WHY?</a>
+        <Parallax
+          type="About"
+          text1={t("@T_About_Paragraph_1")}
+          text2={t("@T_About_Paragraph_2")}
+          backgroundUrl="/sunrise_mountains_2.png"
+          isColumnOne={true}
+        />
       </section>
-      <section id="Projects">What</section>
-      <section id="Testemonials">Testimonials</section>
-      <section id="Contact">Contact</section>
+      <section id="Projects">
+        <Parallax
+          type="Projects"
+          text1={t("@T_About_Paragraph_1")}
+          text2={t("@T_About_Paragraph_2")}
+          backgroundUrl="/sunrise_mountains_2.png"
+          isColumnOne={false}
+        />
+      </section>
+      <section id="Testemonials">
+        <Parallax
+          type="Testemonials"
+          text1={t("@T_About_Paragraph_1")}
+          text2={t("@T_About_Paragraph_2")}
+          backgroundUrl="/sunrise_mountains_2.png"
+          isColumnOne={true}
+        />
+      </section>
+      <section id="Contact">
+        <Parallax
+          type="Contact"
+          text1={t("@T_About_Paragraph_1")}
+          text2={t("@T_About_Paragraph_2")}
+          backgroundUrl="/sunrise_mountains_2.png"
+          isColumnOne={false}
+        />
+      </section>
     </main>
   );
 }
