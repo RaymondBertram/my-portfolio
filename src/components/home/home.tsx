@@ -36,7 +36,7 @@ export default function Home() {
         </motion.div>
       </div>
       <div className="imageContainer">
-        <Image src={"/Ray.png"} width={700} height={700} alt={"Ray"} />
+        {/* <Image src={"/Ray.png"} width={700} height={700} alt={"Ray"} /> */}
       </div>
     </div>
   );
